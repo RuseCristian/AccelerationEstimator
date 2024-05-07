@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">Acceleration Estimator</string>
+    <string name="version">Version 1.0.0</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="image_description">image</string>
+    <string name="mass_measure_unit">kg</string>
+    <string name="mass_measure_imperial">lb</string>
+    <string name="area_measure_unit">m\u00B2</string>
+    <string name="area_measure_unit_imperial">ft\u00B2</string>
+    <string name="density_measure_unit">kg/m\u00B3</string>
+    <string name="density_measure_unit_imperial">lb/ft³</string>
+    <string name="speed_measure_unit">km/h</string>
+    <string name="speed_measure_unit_imperial">mph</string>
+    <string name="torque_measure_unit">Nm</string>
+    <string name="torque_measure_unit_Imperial">lb-ft</string>
+
+    <string name="car_mass_distribution_description"> Car Mass Distribution: This term describes how the weight of a car is divided between its front and rear axles. More weight on the driven wheels enhances acceleration, especially in lower gears.</string>
+
+    <string name="power_train_idle_rpm_description">Idle RPM: This refers to the speed of a car\'s engine crankshaft when the engine is idle or in neutral gear without any load. It\'s the minimum speed needed for the engine to run without stalling. Idle rpm must be equal to the first rpm entry. \n\nAdditionally the following conditions must be met: 500 &lt; idle RPM &lt; off clutch RPM &lt; redline RPM.</string>
+    <string name="off_clutch_rpm_description">Off Clutch RPM: This RPM value indicates the engine speed at which, from a standstill, a vehicle has fully disengaged the clutch pedal. It\'s the RPM threshold where the clutch is no longer pressed at all, allowing for smooth acceleration. \n\nAdditionally the following conditions must be met: 500 &lt; idle RPM &lt; off clutch RPM &lt; redline RPM.</string>
+    <string name="power_train_redline_rpm_description">Redline RPM: This is the maximum speed at which an engine can safely operate without damaging its internal components. Redline rpm must be equal to the last rpm entry. \n\nAdditionally the following conditions must be met: 500 &lt; idle RPM &lt; off clutch RPM &lt; redline RPM.</string>
+    <string name="gas_starting_level_description">Gas Starting Level: This represents the initial value of gas pedal depression given to the car when starting from idle RPM to accelerate from a standstill. As the RPM increases and reaches the off clutch RPM value, this value incrementally increases to 1, indicating full depression of the gas pedal.</string>
+    <string name="rpm_torque_entries_description">RPM/Torque Entries: Enter the RPM and corresponding torque values for the ICE engine\'s torque graph. Each entry consists of an RPM value and its corresponding torque value at said RPM. Ensure that each RPM entry is higher than the preceding one to create a logical torque graph. \n\n More entries ensure a higher degree of quality in the estimation.</string>
+    <string name="drivetrain_layout_description">Drivetrain Layout: This specifies how power is distributed to the wheels of a vehicle. RWD (Rear Wheel Drive) often provides strong straight-line acceleration by leveraging weight transfer to the rear wheels that happens when accelrating. AWD (All Wheel Drive) distributes power to all four wheels, providing excellent traction in various conditions, though it may be slightly heavier. FWD (Front Wheel Drive) directs power to the front wheels, which may experience less weight transfer during acceleration compared to RWD, particularly at low speeds when torque levels are high. However, at higher speeds where torque decreases, this imbalance becomes less pronounced.</string>
+    <string name="drivetrain_loss_description">Drivetrain Loss: This value, ranging from 0 to 100, indicates the percentage of effective torque lost when transferring power from the engine\'s crankshaft to the wheels. Generally, drivetrain loss can range from around 5% to 25%, depending on the drivetrain layout. FWD (Front Wheel Drive) typically experiences the least loss due to the shorter distance between the engine and wheels. RWD (Rear Wheel Drive) falls in the middle, while AWD (All Wheel Drive) tends to have the highest loss as it involves a more complex drivetrain system.</string>
+    <string name="drivetrain_shifting_time_description">Drivetrain Shifting Time: This decimal value represents the time it takes for the car to execute an upshift. Advanced transmissions like the Porsche PDK can achieve upshifts in as little as 0.1 seconds (100ms), making it one of the fastest transmissions available. In contrast, conventional paddle transmissions may take several hundred milliseconds for an upshift, while manual transmissions typically require around 1 second to complete the shift.</string>
+    <string name="drivetrain_final_drive_description">Drivetrain Final Drive: The final gear ratio is the ratio between the rotational speed of the car\'s driveshaft and the rotational speed of the wheels. It acts as a master control for all gears, affecting acceleration and top speed. A higher ratio provides more acceleration (if there\'s sufficient grip) but lower top speed, while a lower ratio offers less acceleration but higher top speed.</string>
+    <string name="number_of_gears_description">Number of Gears: This indicates the total number of gears available in the vehicle\'s transmission system. Gears are mechanical components designed to leverage the power band of the engine more efficiently. Each gear provides a different gear ratio, allowing the engine to operate optimally across various speeds and driving conditions.</string>
+
+
+    <string name="tires_width_description_description">Indicates the width of the tires, typically denoted by the first number on the tire\'s sidewall in millimeters.</string>
+    <string name="tires_aspect_ratio_description">The tire aspect ratio, shown as a percentage on the sidewall, indicates the sidewall height relative to the tire\'s width. It impacts the tire\'s overall diameter: lower ratios mean smaller diameter and quicker acceleration, while higher ratios mean larger diameter and higher top speeds.typically denoted by the second number on the tire\'s sidewall</string>
+    <string name="tires_wheel_diameter_description">Wheel diameter is the width of a wheel at its widest point. A larger diameter can enhance top speed but reduce acceleration, while a smaller one can do the opposite. Diameter being the third number on a tire sidewall in inches.</string>
+    <string name="tires_friction_coefficient_description">Tire Friction Coefficient: It measures the grip between the tire and the road surface. A higher coefficient of friction allows for better acceleration as the tire can transfer more force to the road. Conversely, a lower coefficient means less grip and slower acceleration.
+        \n\n
+        For reference:\n\n
+        - Passenger car tires: 0.8 to 1\n
+        - High-performance tires (e.g., Michelin Pilot Sport 2): up to 1.4\n
+        - Formula 1 soft tires: 1.6 to 1.8\n
+        - Wet asphalt: 0.5 to 0.8 \n
+        - Gravel: around 0.6\n
+        - Snow: around 0.2\n
+        - Ice: as low as 0.1\n</string>
+    <string name="tires_rolling_res_coefficient_description">Tire Rolling Resistance Coefficient: It\'s the force resisting the motion when a tire is rolling, influenced by tire deformation and road friction. Higher resistance can slow down the vehicle and reduce acceleration. Tires with lower resistance may improve acceleration and fuel efficiency, though they often sacrifice some grip.
+        \n\n
+        For reference:\n\n
+        - Passenger car tires: 0.010 to 0.015\n
+        - High-performance tires: 0.007 to 0.010\n
+        - Low rolling resistance tires (eco-friendly): 0.005 to 0.007\n
+        - Off-road tires: 0.015 to 0.030\n</string>
+
+
+    <string name="aerodynamics_coefficient_of_drag_description">"Aerodynamic Drag Coefficient: This measures the resistance an object faces as it moves through a fluid. Higher values indicate more resistance, lower efficiency, and reduced acceleration. Conversely, lower values imply better acceleration. \n\nGeneral values:\nCompact cars: 0.25 to 0.35\nSedans: 0.25 to 0.30\nSports cars: 0.25 to0.40"</string>
+    <string name="aerodynamics_frontal_area_description">"Aerodynamic Frontal Area: It's the total area of a car's front surface facing the direction of motion, including the hood, windshield, and front side windows. Larger frontal areas typically result in higher air resistance, leading to slower acceleration.</string>
+    <string name="aerodynamics_air_density_description">"Aerodynamic Air Density: It's the mass of air per unit volume, influenced by factors like temperature, pressure, and humidity. In typical weather conditions at sea level, air density is approximately 1.225 kilograms per cubic meter (kg/m³) or 0.0765 pounds per cubic foot (lb/ft³). Higher air density increases resistance to motion, potentially reducing acceleration.</string>
+    <string name="aerodynamics_downforce_extra_calc_description">Downforce: It\'s a downward force generated by a car\'s aerodynamic design, crucial for increasing the traction limit of the tires, being more effective as speed increases. High-powered cars often produce more torque than their tires can handle, leading to traction loss. Downforce helps mitigate this by pressing the car onto the ground, maximizing tire grip.</string>
+    <string name="negative_lift_description">Negative Lift Coefficient: Normally referred to as downforce coefficient, akin to how lift elevates an airplane but in the opposite direction. It\'s quantified by the negative lift coefficient, a parameter indicating the aerodynamic efficiency of the car\'s design in generating downforce, similar to how drag coefficient measures air resistance.</string>
+    <string name="downforce_total_area_description">Downforce Total Area: This refers to the total surface area of the aerodynamic elements responsible for generating downforce on the vehicle, such as wings or spoilers. It represents the combined area of these components that contribute to enhancing traction and stability.</string>
+    <string name="downforce_distribution_description">Downforce Distribution: This represents the distribution of downforce between the front and rear axles of the vehicle, typically expressed as a percentage of the total downforce. A higher percentage indicates more downforce on the front axle, while a lower percentage indicates more downforce on the rear axle. In general, for acceleration, it\'s advantageous to have more downforce distributed over the axle with the driven wheels, as this enhances traction and maximizes power transfer to the ground.</string>
+    <string name="app_description">Acceleration Estimator is your go-to app for estimating car acceleration. Powered by extensive car data, it provides accurate acceleration predictions and visualizes the results with easy-to-understand graphs. Simply input your car\'s details and get instant insights into its acceleration performance.</string>
+
+
+    <string name="app_developer">Developer:\nRuse Cristian-Andrei\n\nContatct:\nrusecristiandrei@gmail.com \n\nWebsite:\n\nhttps://github.com/RuseCristian</string>
+
+
+    <string-array name="gear_number_array">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
+    <string-array name="drivetrain_layout_array">
+        <item>RWD</item>
+        <item>FWD</item>
+        <item>AWD</item>
+    </string-array>
+
+
+    <string-array name="graphs">
+        <item>Engine</item>
+        <item>Acceleration vs Speed</item>
+        <item>Torque vs Speed</item>
+        <item>Torque vs Speed(No opposing forces)</item>
+        <item>Gearing</item> <!-- normal gears -->
+        <item>Air Resistance</item>
+        <item>Downforce</item>
+    </string-array>
+</resources>

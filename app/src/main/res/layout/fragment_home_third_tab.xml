@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeSecondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.HomeThirdTabFragment">
+
+        <TextView
+            android:id="@+id/TiresLabel"
+            android:layout_width="405dp"
+            android:layout_height="44dp"
+            android:gravity="center_horizontal"
+            android:text="Tires"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/tires_width_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Width"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TiresLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="mm"
+            app:suffixTextColor="@color/colorPrimary">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tires_width_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/img_btn_tires_width"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/tires_width_box"
+            app:layout_constraintTop_toBottomOf="@id/TiresLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/tires_aspect_ratio_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Aspect Ratio"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tires_width_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tires_aspect_ratio_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_tires_aspect_ratio"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/tires_aspect_ratio_box"
+            app:layout_constraintTop_toBottomOf="@id/tires_width_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/tires_wheel_diameter_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Wheel Diameter"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tires_aspect_ratio_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="inches"
+            app:suffixTextColor="@color/colorPrimary">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tires_wheel_diameter_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/img_btn_tires_wheel_diameter"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/tires_wheel_diameter_box"
+            app:layout_constraintTop_toBottomOf="@id/tires_aspect_ratio_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/tires_friction_coeff_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Friction Coefficient"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:suffixText="μ"
+            app:suffixTextColor="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tires_wheel_diameter_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tires_friction_coeff_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_tires_friction_coeff"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/tires_friction_coeff_box"
+            app:layout_constraintTop_toBottomOf="@id/tires_wheel_diameter_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/tires_rolling_coeff_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Rolling Res. Coefficient"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:suffixText="k"
+            app:suffixTextColor="@color/colorPrimary"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tires_friction_coeff_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tires_rolling_coeff_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_tires_rolling_coeff_input"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/tires_rolling_coeff_box"
+            app:layout_constraintTop_toBottomOf="@id/tires_friction_coeff_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

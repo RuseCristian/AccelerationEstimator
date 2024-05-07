@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeSecondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.HomeSecondTabFragment">
+
+        <TextView
+            android:id="@+id/powerTrainLabel"
+            android:layout_width="405dp"
+            android:layout_height="44dp"
+            android:gravity="center_horizontal"
+            android:text="Power Train"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/idle_rpm_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Idle RPM"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/powerTrainLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/idle_rpm_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_idle_rpm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/idle_rpm_box"
+            app:layout_constraintTop_toBottomOf="@id/powerTrainLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/redline_rpm_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Redline RPM"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idle_rpm_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/redline_rpm_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/img_btn_redline_rpm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/redline_rpm_box"
+            app:layout_constraintTop_toBottomOf="@id/idle_rpm_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/off_clutch_rpm_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Off Clutch RPM"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/redline_rpm_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/off_clutch_rpm_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_off_clutch_rpm"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/idle_rpm_box"
+            app:layout_constraintTop_toBottomOf="@id/redline_rpm_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/gas_starting_level_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Gas Start Level"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/off_clutch_rpm_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/gas_start_level_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_gas_starting_level"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/idle_rpm_box"
+            app:layout_constraintTop_toBottomOf="@id/off_clutch_rpm_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+        <TextView
+            android:id="@+id/rpm_torque_label"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="RPM &amp; Torque"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gas_starting_level_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="50dp" />
+
+
+        <ImageButton
+            android:id="@+id/img_btn_rpm_torque_entries"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/redline_rpm_box"
+            app:layout_constraintTop_toBottomOf="@id/gas_starting_level_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp" />
+
+
+        <Button
+            android:id="@+id/removeRowButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Remove Entry"
+            app:layout_constraintTop_toBottomOf="@id/rpm_torque_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/space"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="15dp"/>
+
+        <androidx.legacy.widget.Space
+            android:id="@+id/space"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/rpm_torque_label"
+            app:layout_constraintStart_toEndOf="@+id/removeRowButton"
+            app:layout_constraintEnd_toStartOf="@+id/addRowButton"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/addRowButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add \n Entry"
+            app:layout_constraintTop_toBottomOf="@id/rpm_torque_label"
+            app:layout_constraintStart_toEndOf="@+id/space"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="15dp"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_rpm_torque_inputs"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="80dp"
+            android:background="@color/colorAccent2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/removeRowButton"
+            app:layout_constraintVertical_bias="0.01999998"
+            tools:layout_editor_absoluteX="-16dp">
+
+            <LinearLayout
+                android:id="@+id/nested_scroll_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/drivetrain_layout_label"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Drivetrain Layout"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nested_scroll_rpm_torque_inputs"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="20dp" />
+
+        <Spinner
+            android:id="@+id/drivetrain_layout_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="92dp"
+            android:layout_marginRight="92dp"
+            android:entries="@array/drivetrain_layout_array"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_loss_box"
+            app:layout_constraintTop_toBottomOf="@id/nested_scroll_rpm_torque_inputs"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            />
+
+
+        <ImageButton
+            android:id="@+id/img_btn_drivetran_layout"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="56dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_loss_box"
+            app:layout_constraintTop_toBottomOf="@id/nested_scroll_rpm_torque_inputs"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/drivetrain_loss_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Drivetrain Loss"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_layout_spinner"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="45dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/drivetrain_loss_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/img_btn_drivetran_loss"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_loss_box"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_layout_spinner"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="63dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/drivetrain_shifting_time_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Shifting Time"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_loss_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            app:suffixText="s"
+            app:suffixTextColor="@color/colorPrimary"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shifting_time_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/img_btn_drivetrain_shifting_time"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_shifting_time_box"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_loss_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/drivetrain_final_drive_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Final Drive Ratio"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_shifting_time_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            app:suffixText="s"
+            app:suffixTextColor="@color/colorPrimary"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/final_drive_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/img_btn_drivetrain_final_drive"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_shifting_time_box"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_shifting_time_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+
+        <TextView
+            android:id="@+id/number_of_gears_label"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Number of Gears"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_final_drive_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="20dp" />
+
+        <Spinner
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:id="@+id/gear_number_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:layout_marginLeft="92dp"
+            android:layout_marginRight="92dp"
+            android:entries="@array/gear_number_array"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_loss_box"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_final_drive_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            />
+
+
+        <ImageButton
+            android:id="@+id/img_btn_number_of_gears"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/drivetrain_shifting_time_box"
+            app:layout_constraintTop_toBottomOf="@id/drivetrain_final_drive_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested_scroll_gear_ratios"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorAccent2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gear_number_spinner"
+            app:layout_constraintVertical_bias="0.07999998">
+
+            <LinearLayout
+                android:id="@+id/gear_ratio_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/gear_number_spinner"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="50dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

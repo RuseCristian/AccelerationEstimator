@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/homeSecondLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.HomeFifthTabFragment">
+
+
+        <TextView
+            android:id="@+id/resultsLabel"
+            android:layout_width="405dp"
+            android:layout_height="44dp"
+            android:gravity="center_horizontal"
+            android:text="Results"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/initial_speed_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Initial Speed"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultsLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="@string/speed_measure_unit"
+            app:suffixTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/initial_speed_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/final_speed_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Final Speed"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/initial_speed_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="@string/speed_measure_unit"
+            app:suffixTextColor="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/final_speed_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:id="@+id/show_results_btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Show Results"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/save_data_set_btn"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_weight="1"
+        android:paddingTop="0dp"/>
+
+    <Button
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:id="@+id/save_data_set_btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Save Data Set"
+        app:layout_constraintTop_toBottomOf="@id/final_speed_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:id="@+id/load_data_set_btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Load Data Set"
+        app:layout_constraintTop_toBottomOf="@id/final_speed_box"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:id="@+id/delete_data_set_btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Delete Data Set"
+        app:layout_constraintTop_toBottomOf="@id/final_speed_box"
+        app:layout_constraintStart_toEndOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="40dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+
+    <TextView
+        android:id="@+id/graph_label"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="Graph"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccentDark"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/show_results_btn"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_weight="1"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        />
+
+    <Spinner
+        android:id="@+id/graph_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginRight="92dp"
+        android:entries="@array/graphs"
+        app:layout_constraintTop_toBottomOf="@id/graph_label"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_weight="1"
+        android:visibility="gone"
+        />
+
+    <Button
+        style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+        android:id="@+id/show_graph_btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Show Graph"
+        app:layout_constraintTop_toBottomOf="@id/graph_spinner"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

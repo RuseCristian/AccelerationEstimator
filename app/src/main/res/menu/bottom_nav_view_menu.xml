@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title=""
+        android:icon="@drawable/car_tab_icon"
+        android:id="@+id/carFragmentFragment"/>
+    <item
+        android:title=""
+        android:icon="@drawable/powertrain_tab_icon"
+        android:id="@+id/powerTrainFragmentFragment"/>
+    <item
+        android:title="@string/app_name"
+        android:icon="@drawable/tire_tab_icon"
+        android:id="@+id/tiresFragmentFragment"/>
+    <item
+        android:title=""
+        android:icon="@drawable/aerodynamics_tab_icon"
+        android:id="@+id/aerodynamicsFragmentFragment"/>
+    <item
+        android:title=""
+        android:icon="@drawable/results_tab_icon"
+        android:id="@+id/resultsFragmentFragment"/>
+
+</menu>

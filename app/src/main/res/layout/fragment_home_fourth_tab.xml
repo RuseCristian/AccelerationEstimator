@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeSecondLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.HomeFourthTabFragment">
+
+        <TextView
+            android:id="@+id/aerodynamicsLabel"
+            android:layout_width="405dp"
+            android:layout_height="44dp"
+            android:gravity="center_horizontal"
+            android:text="Aerodynamics"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/aero_coefficient_of_drag_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Coefficient of Drag"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aerodynamicsLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aerodynamics_coefficient_of_drag_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/img_btn_aero_coefficient_of_drag"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_coefficient_of_drag_box"
+            app:layout_constraintTop_toBottomOf="@id/aerodynamicsLabel"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/aero_frontal_area_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Frontal Area"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aero_coefficient_of_drag_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="@string/area_measure_unit"
+            app:suffixTextColor="@color/colorPrimary">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aerodynamics_frontal_area_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_aero_frontal_area"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_frontal_area_box"
+            app:layout_constraintTop_toBottomOf="@id/aero_coefficient_of_drag_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/aero_air_density_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Air Density"
+            app:expandedHintEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aero_frontal_area_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="@string/density_measure_unit"
+            app:suffixTextColor="@color/colorPrimary">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/aerodynamics_air_density_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_air_density"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="empty"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_air_density_box"
+            app:layout_constraintTop_toBottomOf="@id/aero_frontal_area_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp" />
+
+        <TextView
+            android:id="@+id/aero_downforce_label"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Downforce"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccentDark"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aero_air_density_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="60dp" />
+
+        <Switch
+            android:id="@+id/aero_downforce_calc_switch"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/aero_downforce_label"
+            app:layout_constraintTop_toBottomOf="@id/aero_air_density_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="60dp"
+            android:paddingBottom="5dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        <ImageButton
+            android:id="@+id/image_btn_downforce_calc"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_air_density_box"
+            app:layout_constraintTop_toBottomOf="@id/aero_air_density_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/negative_lift_coefficient_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Negative Lift Coefficient"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aero_downforce_label"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="32dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/negative_lift_coefficient_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned|numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ImageButton
+            android:id="@+id/img_btn_negative_life_coefficient"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_air_density_box"
+            app:layout_constraintTop_toBottomOf="@id/aero_downforce_label"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/downforce_total_area_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Downforce Total Area"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/negative_lift_coefficient_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            app:suffixText="@string/area_measure_unit"
+            app:suffixTextColor="@color/colorPrimary">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/downforce_total_area_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/img_btn_downforce_total_area"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_air_density_box"
+            app:layout_constraintTop_toBottomOf="@id/negative_lift_coefficient_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:id="@+id/downforce_distribution_box"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:hint="Downforce Distribution"
+            app:expandedHintEnabled="true"
+            app:helperText="% of mass over front axle"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/downforce_total_area_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:paddingTop="40dp"
+            android:paddingBottom="150dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/downforce_distribution_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageButton
+            android:id="@+id/img_btn_downforce_distribution"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/extra_info_icon"
+            app:layout_constraintLeft_toRightOf="@id/aero_air_density_box"
+            app:layout_constraintTop_toBottomOf="@id/downforce_total_area_box"
+            app:layout_constraintVertical_chainStyle="spread"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="56dp"  />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
