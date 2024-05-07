@@ -1,6 +1,6 @@
-## Acceleration Approximer
+# Acceleration Approximer
 
-#Overview
+# Overview
 
 The Acceleration Approximer is a smartphone application designed to approximate acceleration based on user input. This app provides users with a simple and intuitive interface to input data and calculate acceleration using predefined formulas.
 Features
