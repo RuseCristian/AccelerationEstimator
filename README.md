@@ -24,12 +24,14 @@ Usage
     Reset: Optionally, reset the input fields to perform new calculations.
 
 Screenshots
-<img width="449" alt="studio64_W0VVfiJaZX" src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/6f9646aa-273f-4237-a029-fbdd077fc895">
-<img width="421" alt="studio64_iHBVfA7BTy" src="h<img width="424" alt="studio64_ogsXHYr0m0" src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/87761424-c25a-4662-85c7-f742f6799b7b">
-<img width="423" alt="studio64_9SjaCYMW13" src="http<img width="423" alt="studio64_9SjaCYMW13" src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/99c2edd4-d594-4ff7-a2c4-ab75e59b730e">
-<img width="416" alt="studio64_F8qwQv59C2" src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/66b9ea13-dd14-4b2e-bdc3-f702a13797a9">
-<img width="424" alt="studio64_0etYDZYXIU" src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/f46f5a7c-2e69-48c9-ab2c-9186ff2ba203">
-<img width="421" alt="studio64_7Nr3yMY3Ap" src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/58a8ee6c-676b-45f5-957b-d8b8ce4463a6">
+
+
+<img src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/6f9646aa-273f-4237-a029-fbdd077fc895">
+<img src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/87761424-c25a-4662-85c7-f742f6799b7b">
+<img src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/99c2edd4-d594-4ff7-a2c4-ab75e59b730e">
+<img src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/66b9ea13-dd14-4b2e-bdc3-f702a13797a9">
+<img src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/f46f5a7c-2e69-48c9-ab2c-9186ff2ba203">
+<img src="https://github.com/RuseCristian/AccelerationEstimator/assets/99805998/58a8ee6c-676b-45f5-957b-d8b8ce4463a6">
 
 
 Installation
