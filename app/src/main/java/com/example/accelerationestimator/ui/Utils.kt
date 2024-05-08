@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.accelerationestimator.R
+import com.github.mikephil.charting.data.LineDataSet
 import com.google.android.material.textfield.TextInputEditText
 import org.json.JSONObject
 import java.io.File
@@ -1157,12 +1158,30 @@ fun estimate_acceleration() {
 
     }
 
-    val speedMeasureUnit = data[4][R.id.final_speed_input]?.context?.getString(R.string.speed_measure_unit)
 
-    // for metric only, must implement case for imperial
-    var formattedInitialSpeed = (initialSpeed * 3.6).toInt()
-    var formattedFinalSpeed = (finalSpeed * 3.6).toInt()
-    var formattedTopSpeed = (topSpeed * 3.6).toInt()
+
+
+    val speedMeasureUnit: String?
+    var formattedInitialSpeed: Int
+    var formattedFinalSpeed: Int
+    var formattedTopSpeed: Int
+
+    if (measurementUnit == true) {
+        speedMeasureUnit = data[4][R.id.final_speed_input]?.context?.getString(R.string.speed_measure_unit)
+
+        // for metric only, must implement case for imperial
+        formattedInitialSpeed = (initialSpeed * 3.6).toInt()
+        formattedFinalSpeed = (finalSpeed * 3.6).toInt()
+        formattedTopSpeed = (topSpeed * 3.6).toInt()
+    } else {
+        speedMeasureUnit = data[4][R.id.final_speed_input]?.context?.getString(R.string.speed_measure_unit_imperial)
+
+        // for metric only, must implement case for imperial
+        formattedInitialSpeed = (initialSpeed * 2.23).toInt()
+        formattedFinalSpeed = (finalSpeed * 2.23).toInt()
+        formattedTopSpeed = (topSpeed * 2.23).toInt()
+    }
+    
     var formattedTime = "%.1f".format(totalTime)
 
 
